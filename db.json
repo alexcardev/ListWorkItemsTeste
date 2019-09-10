@@ -1,0 +1,35 @@
+{
+  "workItems": [
+    {
+      "id": 1,
+      "tipo": "bug",
+      "titulo": "Angular 1",
+      "dataCriacao": "09/09/2019"
+    },
+    {
+      "id": 2,
+      "tipo": "task",
+      "titulo": "Angular 2",
+      "dataCriacao": "09/09/2019"
+    },
+    {
+      "id": 3,
+      "tipo": "issue",
+      "titulo": "Angular 3",
+      "dataCriacao": "03/09/2019"
+    }
+    ,
+    {
+      "id": 4,
+      "tipo": "bug",
+      "titulo": "Angular 4",
+      "dataCriacao": "02/09/2019"
+    },
+    {
+      "id": 5,
+      "tipo": "issue",
+      "titulo": "Angular 3",
+      "dataCriacao": "01/09/2019"
+    }
+  ]
+}

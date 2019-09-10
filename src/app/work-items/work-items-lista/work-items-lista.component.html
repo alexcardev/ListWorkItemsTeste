@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">List Work Items Teste</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+  </nav>
+  <div class="container">
+    <div class="card">
+        <div class="card-header">            
+            <div class="float-left">
+                <h4>Work Items</h4>
+            </div>            
+        </div>
+        <div class="card-body">
+                <div *ngFor="let listaTipo of listaTipos" class="custom-control custom-checkbox custom-control-inline">
+                        <input (click)="filtraTipo()" type="checkbox" class="custom-control-input" id="{{ listaTipo }}" name="tipoWorkItems" value="{{ listaTipo }}">
+                        <label class="custom-control-label" for="{{ listaTipo }}">{{ listaTipo }}</label>
+                </div>
+                <div>
+                    <button (click)="ordenacaoData()" class="btn btn-primary">Ordenação Data</button>
+                </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tipo</th>
+                        <th>Nome</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let workitem of workitems">
+                        <td>{{ workitem.id }}</td>
+                        <td>{{ workitem.tipo }}</td>
+                        <td>{{ workitem.titulo }}</td>
+                        <td>{{ workitem.data | date: 'dd/MM/yyyy' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>    
+  </div>
+  
